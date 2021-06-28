@@ -1,0 +1,123 @@
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Delivery Service</display-name>
+
+<!--Shop Controller-->
+    <servlet>
+        <servlet-name>ShopController</servlet-name>
+        <servlet-class>controllers.shop.ShopController</servlet-class>
+    </servlet>
+
+
+
+    <servlet-mapping>
+        <servlet-name>ShopController</servlet-name>
+        <url-pattern>/shops</url-pattern>
+    </servlet-mapping>
+
+<!--Client Controller-->
+    <servlet>
+        <servlet-name>ClientController</servlet-name>
+        <servlet-class>controllers.client.ClientController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ClientController</servlet-name>
+        <url-pattern>/clients</url-pattern>
+    </servlet-mapping>
+
+<!--AddClient Controller-->
+    <servlet>
+        <servlet-name>AddClientController</servlet-name>
+        <servlet-class>controllers.client.AddClientController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddClientController</servlet-name>
+        <url-pattern>/addClient</url-pattern>
+    </servlet-mapping>
+
+<!--Product Controller-->
+    <servlet>
+        <servlet-name>ProductController</servlet-name>
+        <servlet-class>controllers.product.ProductController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductController</servlet-name>
+        <url-pattern>/products</url-pattern>
+    </servlet-mapping>
+
+<!--AddProducts Controller-->
+    <servlet>
+        <servlet-name>AddProductsController</servlet-name>
+        <servlet-class>controllers.product.AddProductsController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddProductsController</servlet-name>
+        <url-pattern>/addProducts</url-pattern>
+    </servlet-mapping>
+
+<!--SearchProducts Controller-->
+    <servlet>
+        <servlet-name>SearchProductsController</servlet-name>
+        <servlet-class>controllers.product.SearchProductsController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchProductsController</servlet-name>
+        <url-pattern>/searchProducts</url-pattern>
+    </servlet-mapping>
+
+<!--editClients Controller-->
+    <servlet>
+        <servlet-name>EditClientsController</servlet-name>
+        <servlet-class>controllers.client.EditClientsController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditClientsController</servlet-name>
+        <url-pattern>/editClients</url-pattern>
+    </servlet-mapping>
+
+<!--ChangeClients Controller-->
+    <servlet>
+        <servlet-name>ChangeClientsController</servlet-name>
+        <servlet-class>controllers.client.ChangeClientController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChangeClientsController</servlet-name>
+        <url-pattern>/changeClients</url-pattern>
+    </servlet-mapping>
+
+
+
+<!--Order Controller-->
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>controllers.order.OrderController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/orders</url-pattern>
+    </servlet-mapping>
+
+<!--AddOrder Controller-->
+    <servlet>
+        <servlet-name>AddOrderController</servlet-name>
+        <servlet-class>controllers.order.AddOrderController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddOrderController</servlet-name>
+        <url-pattern>/addOrder</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
