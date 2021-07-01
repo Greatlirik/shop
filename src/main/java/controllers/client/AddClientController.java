@@ -33,11 +33,11 @@ public class AddClientController extends HttpServlet {
 
 
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ClientData.json");
+        Reader reader = new FileReader("ClientData.json");
         ClientModel clientModelFromJson = gson.fromJson(reader, ClientModel.class);
         clientModelFromJson.add(client);
 
-        try (FileWriter writer = new FileWriter("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ClientData.json")) {
+        try (FileWriter writer = new FileWriter("ClientData.json")) {
             gson.toJson(clientModelFromJson, writer);
 
         } catch (IOException e) {

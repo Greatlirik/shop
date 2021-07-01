@@ -21,3 +21,11 @@
 .table tbody tr:nth-child(even){
 	background: #F7F7F7;
 }
+
+js_arrow_down:before, js_arrow_down:after {
+	content: "▼";
+}
+
+js_arrow_up:before, js_arrow_up:after {
+	content: "▲";
+}

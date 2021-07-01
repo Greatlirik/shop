@@ -17,7 +17,7 @@ public class OrderController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\OrderData.json");
+        Reader reader = new FileReader("OrderData.json");
 
         // Convert JSON File to Java Object
         OrderModel orderModel = gson.fromJson(reader, OrderModel.class);

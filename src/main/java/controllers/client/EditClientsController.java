@@ -21,7 +21,7 @@ public class EditClientsController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ClientData.json");
+        Reader reader = new FileReader("ClientData.json");
 
         // Convert JSON File to Java Object
         ClientModel clientModel = gson.fromJson(reader, ClientModel.class);
@@ -46,7 +46,7 @@ public class EditClientsController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ClientData.json");
+        Reader reader = new FileReader("ClientData.json");
         ClientModel clientModel = gson.fromJson(reader, ClientModel.class);
         List <String> ids = Arrays.asList(req.getParameterValues("id"));
         List <Client> clients = clientModel.getClients(ids);
@@ -61,7 +61,7 @@ public class EditClientsController extends HttpServlet {
                 break;
         }
 
-        try (FileWriter writer = new FileWriter("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ClientData.json")) {
+        try (FileWriter writer = new FileWriter("ClientData.json")) {
             gson.toJson(clientModel, writer);
         } catch (IOException e) {
             e.printStackTrace();

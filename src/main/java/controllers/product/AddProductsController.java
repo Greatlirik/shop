@@ -35,11 +35,11 @@ public class AddProductsController extends HttpServlet {
         Product product = new Product(name, price, shops);
 
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ProductData.json");
+        Reader reader = new FileReader("ProductData.json");
         ProductModel productModelFromJson = gson.fromJson(reader, ProductModel.class);
         productModelFromJson.add(product);
 
-        try (FileWriter writer = new FileWriter("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ProductData.json")) {
+        try (FileWriter writer = new FileWriter("ProductData.json")) {
             gson.toJson(productModelFromJson, writer);
         } catch (IOException e) {
             e.printStackTrace();

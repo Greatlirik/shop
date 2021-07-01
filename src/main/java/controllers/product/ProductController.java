@@ -18,7 +18,7 @@ public class ProductController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ProductData.json");
+        Reader reader = new FileReader("ProductData.json");
 
         // Convert JSON File to Java Object
         ProductModel productModel = gson.fromJson(reader, ProductModel.class);

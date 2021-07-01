@@ -23,7 +23,7 @@
 
         <table class="table" id= "maintable">
             <thead>
-                <tr><th>names</th><th id="prices" onclick="sort_price();">prices</th><th>shops</th></tr>
+                <tr><th>names</th><th  id="prices" onclick="sort_price();changeArrow()">prices</th><th>shops</th></tr>
             </thead>
             <tbody id ="table1">
                 <%

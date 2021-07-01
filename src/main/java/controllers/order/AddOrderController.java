@@ -31,11 +31,11 @@ public class AddOrderController extends HttpServlet {
 
 
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\OrderData.json");
+        Reader reader = new FileReader("OrderData.json");
         OrderModel orderModelFromJson = gson.fromJson(reader, OrderModel.class);
        orderModelFromJson.add(order);
 
-        try (FileWriter writer = new FileWriter("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\OrderData.json")) {
+        try (FileWriter writer = new FileWriter("OrderData.json")) {
             gson.toJson(orderModelFromJson, writer);
         } catch (IOException e) {
             e.printStackTrace();

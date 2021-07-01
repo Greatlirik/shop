@@ -19,7 +19,7 @@ public class ShopController extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ShopData.json");
+        Reader reader = new FileReader("ShopData.json");
 
         // Convert JSON File to Java Object
         ShopModel shopModel = gson.fromJson(reader, ShopModel.class);

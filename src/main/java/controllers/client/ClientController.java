@@ -17,7 +17,7 @@ public class ClientController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ClientData.json");
+        Reader reader = new FileReader("ClientData.json");
 
         // Convert JSON File to Java Object
         ClientModel clientModel = gson.fromJson(reader, ClientModel.class);

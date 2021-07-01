@@ -22,7 +22,7 @@ public class AddShopController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Gson gson = new Gson();
-        Reader reader = new FileReader("C:\\Users\\Kirill\\Desktop\\workspace\\shop\\ShopData.json");
+        Reader reader = new FileReader("ShopData.json");
         ShopModel shopModelFromJson = gson.fromJson(reader, ShopModel.class);
 
 //        String name = req.getParameter("name");
