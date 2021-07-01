@@ -24,6 +24,7 @@ public class AddClientController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Get attributes from jsp
         String name = req.getParameter("name");
         Integer age = Integer.parseInt(req.getParameter("age"));
         String mail = req.getParameter("mail");
@@ -34,6 +35,8 @@ public class AddClientController extends HttpServlet {
 
         Gson gson = new Gson();
         Reader reader = new FileReader("ClientData.json");
+
+        // Convert JSON File to Java Object
         ClientModel clientModelFromJson = gson.fromJson(reader, ClientModel.class);
         clientModelFromJson.add(client);
 

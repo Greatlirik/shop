@@ -4,6 +4,7 @@ import java.util.List;
 
 
 public class Product {
+    private Category category;
     private int price;
     private String name;
     private List<String> shopNames ;
@@ -16,7 +17,16 @@ public class Product {
         this.shopNames = shopNames;
     }
 
-    public Product(String name, int price, List<String> shopNames ){
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Product(String name, int price, List<String> shopNames, Category category ){
+        this.category = category;
         this.name = name;
         this.shopNames = shopNames;
         this.price = price;

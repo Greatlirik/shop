@@ -31,9 +31,10 @@ public class SearchProductsController extends HttpServlet {
         List<Integer> prices = productModel.productPrices();
         List<List<String>> shops = productModel.productShops();
 
+        // Get query from jsp page
         String query = req.getParameter("query");
 
-
+        // Filtering on demand
         List<String> queryResult = names.stream().filter(s -> s.contains(query)).collect(Collectors.toList());
 
         req.setAttribute("productNames", queryResult);

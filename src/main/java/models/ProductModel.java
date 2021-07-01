@@ -1,5 +1,6 @@
 package models;
 
+import entities.Category;
 import entities.Product;
 
 
@@ -34,8 +35,16 @@ public class ProductModel {
     public List<List<String>> productShops() {
         return productModel.stream()
                 .map(Product::getShopNames)
-                .collect(Collectors.toList())
-                ;
+                .collect(Collectors.toList());
     }
+
+    public List<String> productCategories() {
+        return productModel.stream()
+                .map(s -> s.getCategory())
+                .map(Category::toString)
+                .collect(Collectors.toList());
+
+    }
+
 
 }

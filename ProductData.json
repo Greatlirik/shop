@@ -1,1 +1,1 @@
-{"productModel":[{"price":24,"name":"toy","shopNames":["green","town"]},{"price":21,"name":"allah","shopNames":["green","town"]},{"price":25,"name":"admin","shopNames":["almi"]},{"price":3,"name":"fgh","shopNames":["almi"]},{"price":24,"name":"aaa","shopNames":["korona"]}]}
+{"productModel":[{"category":"OTHER","price":25,"name":"bear","shopNames":["almi"]},{"category":"OTHER","price":23,"name":"car","shopNames":["korona"]},{"category":"TOYS","price":24,"name":"bear","shopNames":["almi"]}]}

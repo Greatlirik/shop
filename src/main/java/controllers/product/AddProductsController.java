@@ -2,6 +2,7 @@ package controllers.product;
 
 
 import com.google.gson.Gson;
+import entities.Category;
 import entities.Product;
 import models.ProductModel;
 
@@ -28,11 +29,32 @@ public class AddProductsController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        Category category;
+        
+        switch (req.getParameter("categories")) {
+            case "toys":
+                category = Category.TOYS;
+                break;
+            case "clothes":
+                category = Category.CLOTHES;
+                break;
+            case "electrical_appliances":
+                category = Category.ELECTRICAL_APPLIANCES;
+                break;
+            case "household_chemicals":
+                category = Category.HOUSEHOLD_CHEMICALS;
+                break;
+            default:
+                category = Category.OTHER;
+                break;
+        }
+
         String name = req.getParameter("name");
         int  price = Integer.parseInt(req.getParameter("price"));
         List<String> shops = new ArrayList<>(Arrays.asList(req.getParameter("shops").split(",")));
 
-        Product product = new Product(name, price, shops);
+        Product product = new Product(name, price, shops, category);
 
         Gson gson = new Gson();
         Reader reader = new FileReader("ProductData.json");
