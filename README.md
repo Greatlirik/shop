@@ -10,3 +10,8 @@ some sections have bugs (did not have time to finish):
 #### verison 1.0.1
  - fixed incorrect paths
  - fixed bug with sorting
+
+
+#### verison 1.1
+- add categories for products
+- add comments
